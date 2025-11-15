@@ -6,7 +6,12 @@ function generateUniqueId() {
   // TODO: Implementasi fungsi untuk menghasilkan ID unik
   // Ini akan digunakan secara internal untuk setiap objek to-do
   // Contoh: Gabungan waktu saat ini dan angka acak
-  return Date.now().toString() + Math.random().toString(36).substring(2, 9)
+
+  const nowUtc = Date.now() // timestamp UTC
+  const offsetMs = 7 * 60 * 60 * 1000 // offset +7
+  const nowJakarta = nowUtc + offsetMs
+  const unique = nowJakarta.toString() + Math.random().toString(36).substring(2, 9)
+  return unique
 }
 
 function addTodo() {
