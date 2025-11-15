@@ -134,7 +134,7 @@ function runTodoApp() {
     // 5. Tangani input perintah yang tidak valid
 
     console.log('\n====================== TO-DO MENU ======================')
-    console.log('Please choose a command by typing the word or its number:')
+    console.log('Please choose a command by typing the command or its number:')
     console.log('1. add      → Add a new to-do item')
     console.log('2. complete → Mark an existing to-do as completed')
     console.log('3. delete   → Remove a to-do from the list')
